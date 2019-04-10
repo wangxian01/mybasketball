@@ -44,4 +44,13 @@ public class UserLogin {
     public void setPassword(String passworld) {
         this.password = passworld;
     }
+
+    @Override
+    public String toString() {
+        return "UserLogin{" +
+                "id=" + id +
+                ", userPhone='" + userPhone + '\'' +
+                ", password='" + password + '\'' +
+                '}';
+    }
 }

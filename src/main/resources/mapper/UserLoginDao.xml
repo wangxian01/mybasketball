@@ -10,5 +10,17 @@
 		VALUES
 		(#{userPhone},#{password})
 	</insert>
+
+	<update id="updateUserInfo" parameterType="com.basketball.mybasketball.entity.UserInfo">
+		update user_info
+		<set>
+			<if test="name != null">name=#{name},</if>
+			<if test="gender != null">gender=#{gender},</if>
+			<if test="introduction != null">introduction=#{introduction},</if>
+			<if test="birthday != null">birthday=#{birthday},</if>
+			<if test="area != null">area=#{area}</if>
+		</set>
+		where phone=#{phone}
+	</update>
 </mapper>
     
