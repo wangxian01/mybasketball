@@ -37,6 +37,7 @@ public class UserLoginDaoTest {
     }
 
     @Test
+    @Ignore
     public void updateUserInfo() {
 
         UserInfo userInfo = new UserInfo();
@@ -47,6 +48,14 @@ public class UserLoginDaoTest {
         userInfo.setIntroduction("我喜欢打兵兵球");
         userInfo.setPhone("17608029745");
         int update = userLoginDao.updateUserInfo(userInfo);
+
+    }
+
+    @Test
+    public void queryUserInfoByPhone() {
+
+        UserInfo userInfo = userLoginDao.queryUserInfoByPhone("17608029745");
+        System.err.println(userInfo.toString());
 
     }
 }

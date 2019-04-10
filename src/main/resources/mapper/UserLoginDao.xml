@@ -11,7 +11,13 @@
 		(#{userPhone},#{password})
 	</insert>
 
-
+	<select id="queryUserInfoByPhone" resultType="com.basketball.mybasketball.entity.UserInfo">
+		SELECT name, phone,
+		img, gender, introduction,birthday,area
+		FROM user_info
+		WHERE
+		phone=#{phone}
+	</select>
 
 	<update id="updateUserInfo" parameterType="com.basketball.mybasketball.entity.UserInfo">
 		update user_info

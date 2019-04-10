@@ -14,9 +14,9 @@ public interface UserLoginDao {
 
     /**
      * 根据手机号列出用户信息
-     * @return area
+     * @return userInfo
      */
-    UserInfo queryUserInfoByPhone(int userPhone);
+    UserInfo queryUserInfoByPhone(String userPhone);
 
     /**
      * 修改用户信息
