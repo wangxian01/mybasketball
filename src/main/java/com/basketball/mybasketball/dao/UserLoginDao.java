@@ -12,6 +12,11 @@ public interface UserLoginDao {
      */
     int insertUser(UserLogin userLogin);
 
+    /**
+     * 根据手机号列出用户信息
+     * @return area
+     */
+    UserInfo queryUserInfoByPhone(int userPhone);
 
     /**
      * 修改用户信息

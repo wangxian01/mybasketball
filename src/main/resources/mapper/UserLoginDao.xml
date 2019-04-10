@@ -11,6 +11,8 @@
 		(#{userPhone},#{password})
 	</insert>
 
+
+
 	<update id="updateUserInfo" parameterType="com.basketball.mybasketball.entity.UserInfo">
 		update user_info
 		<set>
