@@ -1,48 +1,36 @@
 package com.basketball.mybasketball.entity;
 
-import javax.xml.crypto.Data;
-import java.util.Date;
-
-
-public class News {
+public class Video {
 
     /**
-     * 新闻id
+     * 视频id
      */
     private int id;
 
     /**
-     * 新闻标题
+     * 视频标题
      */
     private String title;
 
     /**
-     * 新闻图片
+     * 视频地址
      */
-    private String img;
+    private String videoSrc;
 
     /**
-     * 新闻来源
+     * 视频来源
      */
     private String source;
 
     /**
-     * 新闻内容
+     * 点赞人数
      */
-    private String content;
+    private String like;
 
     /**
-     * 新闻时间
+     * 视频缩略图
      */
-    private Date time;
-
-    public Date getTime() {
-        return time;
-    }
-
-    public void setTime(Date time) {
-        this.time = time;
-    }
+    private String videoImg;
 
     public int getId() {
         return id;
@@ -60,12 +48,12 @@ public class News {
         this.title = title;
     }
 
-    public String getImg() {
-        return img;
+    public String getVideoSrc() {
+        return videoSrc;
     }
 
-    public void setImg(String img) {
-        this.img = img;
+    public void setVideoSrc(String videoSrc) {
+        this.videoSrc = videoSrc;
     }
 
     public String getSource() {
@@ -76,23 +64,31 @@ public class News {
         this.source = source;
     }
 
-    public String getContent() {
-        return content;
+    public String getLike() {
+        return like;
     }
 
-    public void setContent(String content) {
-        this.content = content;
+    public void setLike(String like) {
+        this.like = like;
+    }
+
+    public String getVideoImg() {
+        return videoImg;
+    }
+
+    public void setVideoImg(String videoImg) {
+        this.videoImg = videoImg;
     }
 
     @Override
     public String toString() {
-        return "News{" +
+        return "Video{" +
                 "id=" + id +
                 ", title='" + title + '\'' +
-                ", img='" + img + '\'' +
+                ", videoSrc='" + videoSrc + '\'' +
                 ", source='" + source + '\'' +
-                ", content='" + content + '\'' +
-                ", time=" + time +
+                ", like='" + like + '\'' +
+                ", videoImg='" + videoImg + '\'' +
                 '}';
     }
 }
