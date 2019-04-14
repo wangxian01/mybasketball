@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+		"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.basketball.mybasketball.dao.VideoDao">
+	<select id="queryVideos" resultType="com.basketball.mybasketball.entity.Video">
+		SELECT id, title,
+		video_src, source, likes,video_img
+		FROM video
+	</select>
+	<select id="queryVideoById" resultType="com.basketball.mybasketball.entity.Video">
+		SELECT id, title,
+		video_src, source, likes,video_img
+		FROM video
+		WHERE
+		id=#{videoId}
+	</select>
+	<update id="updateLikes" parameterType="com.basketball.mybasketball.entity.Video">
+		update video
+		<set>
+			<if test="likes != null">likes=#{likes},</if>
+		</set>
+		where id=#{id}
+	</update>
+
+</mapper>
+    

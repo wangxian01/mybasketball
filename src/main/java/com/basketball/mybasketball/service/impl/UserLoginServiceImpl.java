@@ -42,7 +42,7 @@ public class UserLoginServiceImpl implements UserLoginService {
 
 
     /**
-     * 根据用户信息显示用户数据
+     * 根据用户phone显示用户信息
      * @param userPhone
      * @return
      */

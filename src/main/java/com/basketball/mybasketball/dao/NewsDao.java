@@ -7,7 +7,7 @@ import java.util.List;
 public interface NewsDao {
 
     /**
-     * 列出新闻列表列表
+     * 列出新闻列表
      * @return newsList
      */
     List<News> queryNews();

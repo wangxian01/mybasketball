@@ -25,7 +25,7 @@ public class Video {
     /**
      * 点赞人数
      */
-    private String like;
+    private String likes;
 
     /**
      * 视频缩略图
@@ -65,11 +65,11 @@ public class Video {
     }
 
     public String getLike() {
-        return like;
+        return likes;
     }
 
-    public void setLike(String like) {
-        this.like = like;
+    public void setLike(String likes) {
+        this.likes = likes;
     }
 
     public String getVideoImg() {
@@ -87,7 +87,7 @@ public class Video {
                 ", title='" + title + '\'' +
                 ", videoSrc='" + videoSrc + '\'' +
                 ", source='" + source + '\'' +
-                ", like='" + like + '\'' +
+                ", like='" + likes + '\'' +
                 ", videoImg='" + videoImg + '\'' +
                 '}';
     }
