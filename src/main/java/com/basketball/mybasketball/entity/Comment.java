@@ -21,6 +21,16 @@ public class Comment {
     private int userId;
 
     /**
+     * 用户昵称
+     */
+    private String userName;
+
+    /**
+     * 用户头像
+     */
+    private String userImg;
+
+    /**
      * 新闻或视频id
      */
     private int newsId;
@@ -40,63 +50,5 @@ public class Comment {
      */
     private int like;
 
-    @Override
-    public String toString() {
-        return "Comment{" +
-                "id=" + id +
-                ", userId=" + userId +
-                ", newsId=" + newsId +
-                ", replyMsg='" + replyMsg + '\'' +
-                ", createDate=" + createDate +
-                ", like=" + like +
-                '}';
-    }
 
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
-
-    public int getUserId() {
-        return userId;
-    }
-
-    public void setUserId(int userId) {
-        this.userId = userId;
-    }
-
-    public int getNewsId() {
-        return newsId;
-    }
-
-    public void setNewsId(int newsId) {
-        this.newsId = newsId;
-    }
-
-    public String getReplyMsg() {
-        return replyMsg;
-    }
-
-    public void setReplyMsg(String replyMsg) {
-        this.replyMsg = replyMsg;
-    }
-
-    public Date getCreateDate() {
-        return createDate;
-    }
-
-    public void setCreateDate(Date createDate) {
-        this.createDate = createDate;
-    }
-
-    public int getLike() {
-        return like;
-    }
-
-    public void setLike(int like) {
-        this.like = like;
-    }
 }
