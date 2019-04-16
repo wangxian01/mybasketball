@@ -12,6 +12,12 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+/**
+ * 示例
+ * 获取所有的新闻信息:http://localhost:8082/mybasketball//news/listnews
+ * 通过Id获取新闻信息:http://localhost:8082/mybasketball//news/getnewsbyid?newsId=1
+ */
+
 @RestController
 @RequestMapping("/news")
 public class NewsController {
@@ -27,9 +33,9 @@ public class NewsController {
     private Map<String, Object> listNews() {
         Map<String, Object> modelMap = new HashMap<String, Object>();
         List<News> list = new ArrayList<News>();
-        // 获取区域列表
+        // 获取新闻列表
         list = newsService.getNewsList();
-        modelMap.put("newsList", list);
+        modelMap.put("success", list);
         return modelMap;
     }
 
@@ -40,9 +46,9 @@ public class NewsController {
     @RequestMapping(value = "/getnewsbyid", method = RequestMethod.GET)
     private Map<String, Object> geNewsById(Integer newsId) {
         Map<String, Object> modelMap = new HashMap<String, Object>();
-        // 获取区域信息
+        // 获取新闻信息
         News news = newsService.getNewsById(newsId);
-        modelMap.put("news", news);
+        modelMap.put("success", news);
         return modelMap;
     }
 
