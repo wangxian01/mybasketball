@@ -6,7 +6,7 @@ import com.basketball.mybasketball.entity.Video;
 /**
  * CommentDao
  * @author wangxian
- * @Description
+ * @Description 评论
  * @date 2019/4/14
  */
 public interface CommentDao {
