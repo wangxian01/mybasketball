@@ -3,6 +3,8 @@ package com.basketball.mybasketball.dao;
 import com.basketball.mybasketball.entity.Comment;
 import com.basketball.mybasketball.entity.Video;
 
+import java.util.List;
+
 /**
  * CommentDao
  * @author wangxian
@@ -12,7 +14,13 @@ import com.basketball.mybasketball.entity.Video;
 public interface CommentDao {
 
     /**
-     * 用户评论
+     * 根据id列出评论列表
+     * @return newsList
+     */
+    List<Comment> queryComments(int newsId);
+
+    /**
+     * 用户添加评论
      * @param comment
      * @return
      */

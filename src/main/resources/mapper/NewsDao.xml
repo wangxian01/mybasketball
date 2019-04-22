@@ -5,14 +5,14 @@
 <mapper namespace="com.basketball.mybasketball.dao.NewsDao">
 	<select id="queryNews" resultType="com.basketball.mybasketball.entity.News">
 		SELECT id, title,
-		img, source, content,time
+		img,imgtwo,imgthree,source, content,time
 		FROM news
 		where
 		newstype=#{newsType}
 	</select>
 	<select id="queryNewsById" resultType="com.basketball.mybasketball.entity.News">
 		SELECT id, title,
-		img, source, content,time
+		img,imgtwo,imgthree,source, content,time
 		FROM news
 		WHERE
 		id=#{newsId}

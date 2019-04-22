@@ -50,12 +50,12 @@ public class News {
         this.imgThree = imgThree;
     }
 
-    public int getType() {
+    public int getnewsType() {
         return newsType;
     }
 
-    public void setType(int type) {
-        this.newsType = type;
+    public void setnewsType(int newsType) {
+        this.newsType = newsType;
     }
 
     /**

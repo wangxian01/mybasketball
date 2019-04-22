@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+		"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.basketball.mybasketball.dao.CommentDao">
+	<select id="queryComments" resultType="com.basketball.mybasketball.entity.Comment">
+		SELECT c.id,c.newsId,c.userId,c.replyMsg,c.createDate,c.likes,ui.img,ui.name
+		FROM comment c
+		left join user_info ui  ON ui.id = c.userId
+		WHERE c.newsId = #{newsId}
+	</select>
+
+	<insert id="insertComment" useGeneratedKeys="true" keyProperty="id"
+			keyColumn="id" parameterType="com.basketball.mybasketball.entity.Comment">
+		INSERT into comment(userId,newsId,replyMsg,createDate,likes)
+		VALUES(#{userId},#{newsId},#{replyMsg},#{createDate},#{likes})
+	</insert>
+</mapper>
+    
