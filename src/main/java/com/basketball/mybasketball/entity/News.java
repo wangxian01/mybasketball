@@ -3,7 +3,10 @@ package com.basketball.mybasketball.entity;
 import javax.xml.crypto.Data;
 import java.util.Date;
 
-
+/**
+ * @author wangxian
+ * @date 2019/4/20
+ */
 public class News {
 
     /**
