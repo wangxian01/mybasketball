@@ -8,14 +8,14 @@ public interface NewsService {
 
     /**
      * 获取新闻列表
-     * @return
+     * @return listNews
      */
-    List<News> getNewsList();
+    List<News> getNewsList(int newsType);
 
     /**
      * 通过Id获取新闻详细信息
      * @param newsId
-     * @return
+     * @return News
      */
     News getNewsById(int newsId);
 

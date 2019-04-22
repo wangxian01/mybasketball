@@ -22,6 +22,40 @@ public class News {
     private String img;
 
     /**
+     * 新闻图片2
+     */
+    private String imgTwo;
+
+    /**
+     * 新闻图片3
+     */
+    private String imgThree;
+
+    public String getImgTwo() {
+        return imgTwo;
+    }
+
+    public void setImgTwo(String imgTwo) {
+        this.imgTwo = imgTwo;
+    }
+
+    public String getImgThree() {
+        return imgThree;
+    }
+
+    public void setImgThree(String imgThree) {
+        this.imgThree = imgThree;
+    }
+
+    public int getType() {
+        return newsType;
+    }
+
+    public void setType(int type) {
+        this.newsType = type;
+    }
+
+    /**
      * 新闻来源
      */
     private String source;
@@ -35,6 +69,11 @@ public class News {
      * 新闻时间
      */
     private Date time;
+
+    /**
+     * 新闻类型 0:推荐 1:NBA 2:CBA
+     */
+    private int newsType;
 
     public Date getTime() {
         return time;
@@ -90,9 +129,12 @@ public class News {
                 "id=" + id +
                 ", title='" + title + '\'' +
                 ", img='" + img + '\'' +
+                ", imgTwo='" + imgTwo + '\'' +
+                ", imgThree='" + imgThree + '\'' +
                 ", source='" + source + '\'' +
                 ", content='" + content + '\'' +
                 ", time=" + time +
+                ", type=" + newsType +
                 '}';
     }
 }

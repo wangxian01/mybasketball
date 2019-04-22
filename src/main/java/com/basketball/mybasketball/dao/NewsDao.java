@@ -10,7 +10,7 @@ public interface NewsDao {
      * 列出新闻列表
      * @return newsList
      */
-    List<News> queryNews();
+    List<News> queryNews(int newsType);
 
     /**
      * 根据Id列出具体新闻详情

@@ -28,10 +28,10 @@ public class NewsDaoTest {
     @Ignore
     public void queryNews() {
 
-        List<News> newsList = newsDao.queryNews();
+        List<News> newsList = newsDao.queryNews(0);
         System.err.println(newsList.get(0).toString());
         // 验证预期值和实际值是否相符
-        assertEquals(1, newsList.size());
+        assertEquals(2, newsList.size());
 
     }
 

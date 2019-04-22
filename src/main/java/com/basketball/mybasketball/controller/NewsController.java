@@ -14,7 +14,7 @@ import java.util.Map;
 
 /**
  * 示例
- * 获取所有的新闻信息:http://localhost:8082/mybasketball//news/listnews
+ * 获取所有的新闻信息:http://172.17.191.121:8082/mybasketball//news/listnews
  * 通过Id获取新闻信息:http://localhost:8082/mybasketball//news/getnewsbyid?newsId=1
  */
 
@@ -30,11 +30,11 @@ public class NewsController {
      * @return
      */
     @RequestMapping(value = "/listnews", method = RequestMethod.GET)
-    private Map<String, Object> listNews() {
+    private Map<String, Object> listNews(Integer newsType) {
         Map<String, Object> modelMap = new HashMap<String, Object>();
         List<News> list = new ArrayList<News>();
         // 获取新闻列表
-        list = newsService.getNewsList();
+        list = newsService.getNewsList(newsType);
         modelMap.put("success", list);
         return modelMap;
     }

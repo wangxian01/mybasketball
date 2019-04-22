@@ -7,6 +7,8 @@
 		SELECT id, title,
 		img, source, content,time
 		FROM news
+		where
+		newstype=#{newsType}
 	</select>
 	<select id="queryNewsById" resultType="com.basketball.mybasketball.entity.News">
 		SELECT id, title,
