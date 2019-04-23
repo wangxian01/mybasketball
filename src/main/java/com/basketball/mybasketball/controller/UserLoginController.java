@@ -27,6 +27,24 @@ public class UserLoginController {
     @Autowired
     private UserLoginService userLoginService;
 
+    /**
+     * 用户登录
+     * @param userLogin
+     * @return
+     */
+    @RequestMapping(value = "/login",method = RequestMethod.POST)
+    private Map<String,Object> login(@RequestBody UserLogin userLogin){
+        Map<String, Object> modelMap = new HashMap<String, Object>();
+        // 用户登录
+        modelMap.put("success", userLoginService.loginUser(userLogin));
+        return modelMap;
+    }
+
+    /**
+     * 用户注册
+     * @param userLogin
+     * @return
+     */
     @RequestMapping(value = "/register",method = RequestMethod.POST)
     private Map<String,Object> register(@RequestBody UserLogin userLogin){
         Map<String, Object> modelMap = new HashMap<String, Object>();

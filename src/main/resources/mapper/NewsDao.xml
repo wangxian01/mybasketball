@@ -17,5 +17,6 @@
 		WHERE
 		id=#{newsId}
 	</select>
+
 </mapper>
     

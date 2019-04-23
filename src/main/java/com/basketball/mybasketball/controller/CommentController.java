@@ -3,10 +3,7 @@ package com.basketball.mybasketball.controller;
 import com.basketball.mybasketball.entity.Comment;
 import com.basketball.mybasketball.service.CommentService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.HashMap;
 import java.util.List;
@@ -14,7 +11,7 @@ import java.util.Map;
 
 /**
  * 示例
- * 根据手机号获取用户信息:http://172.17.191.121:8082/mybasketball//comment/getcommentlist?newsId=1
+ * 根据新闻id获取新闻评论:http://172.17.133.163:8082/mybasketball//comment/getcommentlist?newsId=26
  */
 @RestController
 @RequestMapping("/comment")

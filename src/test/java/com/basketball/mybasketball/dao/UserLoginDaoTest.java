@@ -37,7 +37,6 @@ public class UserLoginDaoTest {
     }
 
     @Test
-    @Ignore
     public void updateUserInfo() {
 
         UserInfo userInfo = new UserInfo();
@@ -46,7 +45,7 @@ public class UserLoginDaoTest {
 //        userInfo.setBirthday(new Date());
         userInfo.setGender("0");
         userInfo.setIntroduction("我喜欢打兵兵球");
-        userInfo.setPhone("17608029745");
+        userInfo.setPhone("1760802974");
         int update = userLoginDao.updateUserInfo(userInfo);
 
     }
@@ -54,8 +53,33 @@ public class UserLoginDaoTest {
     @Test
     public void queryUserInfoByPhone() {
 
-        UserInfo userInfo = userLoginDao.queryUserInfoByPhone("17608029745");
+        UserInfo userInfo = userLoginDao.queryUserInfoByPhone("1760802974");
+
         System.err.println(userInfo.toString());
+
+    }
+
+    @Test
+    public void loginUser() {
+
+        UserLogin userLogin = new UserLogin();
+        userLogin.setPassword("12346");
+        userLogin.setUserPhone("1708029745");
+        if (userLoginDao.loginUser(userLogin) != null){
+            System.err.println(userLogin.getUserPhone());
+        }else {
+            System.err.println("莫法");
+        }
+
+    }
+
+    @Test
+    public void updateUserImage() {
+
+        UserInfo userInfo = new UserInfo();
+        userInfo.setPhone("17608029745");
+        userInfo.setImg("002.jpg");
+        int i = userLoginDao.updateUserImage(userInfo);
 
     }
 }

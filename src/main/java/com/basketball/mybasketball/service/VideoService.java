@@ -1,6 +1,5 @@
 package com.basketball.mybasketball.service;
 
-import com.basketball.mybasketball.entity.News;
 import com.basketball.mybasketball.entity.Video;
 
 import java.util.List;
